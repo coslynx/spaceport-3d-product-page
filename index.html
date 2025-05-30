@@ -1,0 +1,88 @@
+{
+  "dependencies": {
+    "@react-three/drei": "^9.92.7",
+    "@react-three/fiber": "^8.15.19",
+    "@types/react": "^18.3.1",
+    "@types/react-dom": "^18.3.1",
+    "@types/three": "^0.162.0",
+    "clsx": "^2.1.1",
+    "framer-motion": "^12.6.3",
+    "gsap": "^3.12.5",
+    "lucide-react": "^0.344.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "tailwind-merge": "^2.5.4",
+    "three": "^0.159.0"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.13.0",
+    "@tailwindcss/typography": "^0.5.14",
+    "@types/node": "^20.11.24",
+    "@typescript-eslint/eslint-plugin": "^7.5.0",
+    "@typescript-eslint/parser": "^7.5.0",
+    "@vitejs/plugin-react": "^4.3.3",
+    "autoprefixer": "^10.4.20",
+    "eslint": "^9.13.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-import": "^2.59.0",
+    "eslint-plugin-jsx-a11y": "^8.1.2",
+    "eslint-plugin-prettier": "^5.1.3",
+    "eslint-plugin-react": "^7.34.1",
+    "eslint-plugin-react-hooks": "^5.0.0",
+    "eslint-plugin-react-refresh": "^0.4.14",
+    "globals": "^15.11.0",
+    "postcss": "^8.4.35",
+    "prettier": "^3.3.0",
+    "prettier-plugin-tailwindcss": "^0.5.11",
+    "tailwindcss": "^3.4.14",
+    "typescript": "^5.6.3",
+    "vite": "^5.4.10"
+  },
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
+    "preview": "vite preview",
+    "typecheck": "tsc --noEmit"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ]
+}
+```
+
+**Explanation of Key Packages and Versions:**
+
+*   **React & React DOM (`^18.3.1`)**: Core React library and DOM rendering for the UI. Using React 18 unlocks concurrent rendering, suspense, and other modern features that can be beneficial for 3D performance and user experience.
+
+*   **Three.js (`^0.159.0`)**: Low-level 3D graphics library.
+
+*   **@react-three/fiber (`^8.15.19`)**: Connects React components to Three.js, making it much easier to manage Three.js scenes with React.  A more recent version, as indicated by the `^` symbol, will be selected for better compatibility.
+
+*   **@react-three/drei (`^9.92.7`)**: A collection of useful helpers and abstractions for Three.js, such as OrbitControls, loaders, and more.
+
+*   **GSAP (`^3.12.5`)**: Animation library for creating smooth and performant animations.  GSAP is a workhorse and offers excellent control and features.
+
+*   **clsx (`^2.1.1`) and tailwind-merge (`^2.5.4`)**: Utilities for combining CSS class names, making it easier to work with Tailwind CSS.
+
+*   **TypeScript (`^5.6.3`)**: Adds static typing to the project, which improves code quality and maintainability.
+
+*   **Vite (`^5.4.10`)**: The build tool used for fast development and optimized production builds.
+
+*   **Tailwind CSS (`^3.4.14`)**: For utility-first CSS styling.
+
+**Notes:**
+
+*   **Version Ranges (`^`)**:  The `^` symbol indicates that npm/yarn is allowed to install newer patch and minor versions of the packages.  This allows for bug fixes and new features without breaking changes.  It's good practice, but always test thoroughly after updates.
+
+*   **Dependencies vs. DevDependencies**:
+    *   `dependencies`: Packages required for the application to run in production.
+    *   `devDependencies`: Packages used for development (e.g., build tools, linters, testing frameworks) that aren't needed in the final build.
+
+This `package.json` provides a solid foundation for our 3D React landing page project. Remember to run `npm install` (or `yarn install`) after creating this file to install all the dependencies.   You should also configure your IDE to use ESLint and Prettier for a consistent development experience. Good luck!
